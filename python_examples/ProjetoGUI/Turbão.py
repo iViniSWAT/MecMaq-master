@@ -86,8 +86,11 @@ def espProd():
     densidadecalda1_Text.text_color = "White"
     densidadecalda1_Text.text_size = 15
     densidadecalda1_TextBox = TextBox(calda1_Box, grid=[1,0])
-    densidadecalda1_TextBox.append("kg/m³")
+    ## densidadecalda1_TextBox.append("kg/m³")
     densidadecalda1_TextBox.bg = "White"
+    densidadecalda1Final_Text = Text(calda1_Box, text="ml/Kg", font="Geometria", grid=[2,0])
+    densidadecalda1Final_Text.text_color = "White"
+    densidadecalda1Final_Text.text_size = 15
 
     spacer7_Box = Box(calda1_Box, width="fill", height=5, grid=[0,1], align="left", border=True)
 
@@ -95,8 +98,11 @@ def espProd():
     densidadecalda2_Text.text_color = "White"
     densidadecalda2_Text.text_size = 15
     densidadecalda2_TextBox = TextBox(calda1_Box, grid=[1,2])
-    densidadecalda2_TextBox.append("kg/m³")
+    ## densidadecalda2_TextBox.append("kg/m³")
     densidadecalda2_TextBox.bg = "White"
+    densidadecalda2Final_Text = Text(calda1_Box, text="ml/Kg", font="Geometria", grid=[2,2])
+    densidadecalda2Final_Text.text_color = "White"
+    densidadecalda2Final_Text.text_size = 15
 
 #----------------------------------------------------------#
 

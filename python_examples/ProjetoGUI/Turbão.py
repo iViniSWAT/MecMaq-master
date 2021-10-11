@@ -79,6 +79,8 @@ def espProd():
 
     spacer6_Box = Box(especificProd, width=50, height="fill", align="left", border=True)
 
+    keyboard_buttons = Box(especificProd,width="fill", height="fill", align="right", border=True)
+
     formsBox = Box(especificProd, width="fill", height="fill", layout="grid",border=True)
 
     calda1_Box = Box(formsBox, width="fill", border=True, layout="grid", grid=[0,0])
@@ -94,7 +96,7 @@ def espProd():
 
     spacer7_Box = Box(calda1_Box, width="fill", height=5, grid=[0,1], align="left", border=True)
 
-    quantidadecalda1_Text = Text(calda1_Box, text="Quantidade da Calda 1     ", font="Geometria", grid=[0,2])
+    quantidadecalda1_Text = Text(calda1_Box, text=" Quantidade da Calda 1     ", font="Geometria", grid=[0,2])
     quantidadecalda1_Text.text_color = "White"
     quantidadecalda1_Text.text_size = 15
     quantidadecalda1_TextBox = TextBox(calda1_Box, grid=[1,2])
@@ -104,7 +106,10 @@ def espProd():
     quantidadecalda1Final_Text.text_color = "White"
     quantidadecalda1Final_Text.text_size = 15
 
-    spacer8_Box = Box(formsBox, grid=[0,2], border=True)
+    spacer8_Box = Box(formsBox, width="fill", height= 20, grid=[0,1], align="left", border=True)
+
+    po1_Box = Box(formsBox, width="fill", height="fill", grid=[0,2], layout="grid", border=True)
+
 #----------------------------------------------------------#
 
 app = App(title="Mecmaq",bg="#2d2e6f")

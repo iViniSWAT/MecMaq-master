@@ -1,4 +1,4 @@
-from tkinter import *
+#from tkinter import *
 from guizero import *
 import sys
 
@@ -6,6 +6,15 @@ volAleta = 1922223.16 #mm³
 
 #def exitapp():
 #    sys.exit()
+
+def inputNumber(key):
+    global displayString, operatorFlag
+    if operatorFlag:
+        displayString=''
+        operatorFlag = False
+    displayString = displayString + key
+    display.value = displayString
+
 
 def milhoVariaveis():
     tiposTrat = Window(app, title="Tipos de Tratamento", bg="#2d2e6f")
@@ -79,7 +88,31 @@ def espProd():
 
     spacer6_Box = Box(especificProd, width=50, height="fill", align="left", border=True)
 
-    keyboard_buttons = Box(especificProd,width="fill", height="fill", align="right", border=True)
+    keyboard_buttons = Box(especificProd,width="fill", height="fill", align="right", layout="grid", border=True)
+    labelspacer1 = Text(keyboard_buttons, grid=[0,1],text="                ")
+    btn7 = PushButton(keyboard_buttons, command=inputNumber, args=['7'], text='7', grid=[1,1],width=5,height=4)
+    btn8 = PushButton(keyboard_buttons, command=inputNumber, args=['8'], text='8', grid=[2,1],width=5,height=4)
+    btn9 = PushButton(keyboard_buttons, command=inputNumber, args=['9'], text='9', grid=[3,1],width=5,height=4)
+    btn4 = PushButton(keyboard_buttons, command=inputNumber, args=['4'], text='4', grid=[1,2],width=5,height=4)
+    btn5 = PushButton(keyboard_buttons, command=inputNumber, args=['5'], text='5', grid=[2,2],width=5,height=4)
+    btn6 = PushButton(keyboard_buttons, command=inputNumber, args=['6'], text='6', grid=[3,2],width=5,height=4)
+    btn1 = PushButton(keyboard_buttons, command=inputNumber, args=['1'], text='1', grid=[1,3],width=5,height=4)
+    btn2 = PushButton(keyboard_buttons, command=inputNumber, args=['2'], text='2', grid=[2,3],width=5,height=4)
+    btn3 = PushButton(keyboard_buttons, command=inputNumber, args=['3'], text='3', grid=[3,3],width=5,height=4)
+    btn0 = PushButton(keyboard_buttons, command=inputNumber, args=['0'], text='0', grid=[2,4],width=5,height=4)
+    #btnDec = PushButton(keyboard_buttons, command=inputNumber, args=['.'], text=' .', grid=[3,4],width=5,height=4)
+    
+    btn7.bg="White"
+    btn8.bg="white"
+    btn9.bg="White"
+    btn4.bg="White"
+    btn5.bg="White"
+    btn6.bg="White"
+    btn1.bg="White"
+    btn2.bg="White"
+    btn3.bg="White"
+    btn0.bg="White"
+    #btnDec.bg="White"
 
     formsBox = Box(especificProd, width="fill", height="fill", layout="grid",border=True)
 
@@ -108,7 +141,17 @@ def espProd():
 
     spacer8_Box = Box(formsBox, width="fill", height= 20, grid=[0,1], align="left", border=True)
 
-    po1_Box = Box(formsBox, width="fill", height="fill", grid=[0,2], layout="grid", border=True)
+    po1_Box = Box(formsBox, width="fill", height="fill", grid=[0,2], layout="grid", align="left", border=True)
+    po1quantidade_Text = Text(po1_Box, text="Quantidade do Pó 1            ", font="Geometria", grid=[0,0])
+    po1quantidade_Text.text_color="White"
+    po1quantidade_Text.text_size=15
+    po1quantidade_TextBox = TextBox(po1_Box, grid=[1,0])
+    po1quantidade_TextBox.bg = "White"
+    po1quantidadeFinal_Text = Text(po1_Box, text="g/kg", grid=[2,0], font="Geometria")
+    po1quantidadeFinal_Text.text_color = "white"
+    po1quantidadeFinal_Text.text_size = 15
+
+
 
 #----------------------------------------------------------#
 
